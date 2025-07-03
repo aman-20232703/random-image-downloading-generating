@@ -16,17 +16,13 @@ def download_file(url, name):
         file.write(response.content)
 
     print(f"✅ Finished downloading file {name}!")
-
-# ---------------------------
-# 👇 Method 1: Sequential Download
-# ---------------------------
+    
+# Method 1: Sequential Download
 print("🔁 Starting SEQUENTIAL image downloads...\n")
 for i in range(5):
     download_file(url, i)
 
-# ---------------------------
-# 👇 Method 2: Parallel Download using multiprocessing
-# ---------------------------
+# Method 2: Parallel Download using multiprocessing
 print("\n🚀 Starting PARALLEL image downloads using multiprocessing...\n")
 
 # Create a list to keep track of process objects
